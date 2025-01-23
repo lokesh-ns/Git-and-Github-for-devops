@@ -62,5 +62,48 @@
 	
 11.	I just committed but forgot to add a few files to the commit. Is there a way
 	to update the same commit with some modifications?
+	
+	Yes. You can update the commit by amending your changes.
+	
+	To add files git add <file-name> <file-name> ...
+	
+	To update the commit git commit --amend --no-edit
+	
+	To update with new commit message git commit --amend -m 'My new commit message' 
+	(This command can also be used to update previous commit message without any code modifications)
+	
+	--no-edit is used to avoid the prompt to edit commit message. If you wanna modify commit
+	message as well, during commit update, then do not include -m along with your commit message
+	
+	The amend updates the previous commit without creating a new one on top of the previous.
+	(In reality, Git discards the previous commit and replaces it with a new commit)
+	
+12.	I want to rename my local and remote branches. How can I do it?
+	
+	To rename a branch, checkout to the branch and rename it.
+	
+	Check out other branch, git checkout <your-branch-name>
+	Rename your branch, git branch -m <new-branch-name>
+	Push to remote, git push <remote> :<your-branch> <new-branch-name>
+	Set upstream, git push <remote> -u <new-branch-name>
+	
+13.	I have made some changes to the code on the branch on which all of the
+	developers are working. How can I publish my changes?
+	
+	To move the changes from your local machine to remote (EX: origin), follow the below steps in your terminal
+	
+	Stage the files git add *
+	Commit the changes git commit -m "<some commit message>"
+	Push the changes git push
+	
+14.	I created a commit and also pushed it to master. Is it possible to update that commit now?
+
+	Yes. You can update the commit even after it is pushed. Everything will follow as mentioned in the
+	previous question, but you will have to force push.
+	
+	git add <file-name> <file-name> ...
+	git commit --amend --no-edit or git commit --amend
+	git push -f or git push --force
+
 
 
