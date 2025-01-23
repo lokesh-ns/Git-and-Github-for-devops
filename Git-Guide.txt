@@ -136,5 +136,11 @@
 	Checkout the branch, git checkout <destination-branch>
 	Cherry-pick the commit, git cherry-pick <commit-id>
 	
-19. 
-
+19. I have pushed my changes and got it merged to master and now I want to revert it immediately.
+	
+	Revert creates a reverse commit where the changes made will reverse and is created as a new
+	commit. 
+	To revert a particular commit first, obtain its commit id.
+	
+	1. Revert the commit git revert <commit-id>
+	2. Push the commit git push
