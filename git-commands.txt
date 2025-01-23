@@ -7,3 +7,8 @@ git status
 git remote add origin https://github.com/lokesh-ns/git-and-github-for-devops.git
 git remote -v
 git push origin master
+git clone <http_link>
+git fetch # To bring the branches from remote to local
+git pull # To bring the changes of branches from remote to local
+git log # To get the logs of commit i,e head (latest commit)
+git log --oneline  # To get the commit details of first line
