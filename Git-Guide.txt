@@ -104,6 +104,37 @@
 	git add <file-name> <file-name> ...
 	git commit --amend --no-edit or git commit --amend
 	git push -f or git push --force
+	
+15.	I have created single/multiple commits. When I am trying to push my
+	changes, getting a rejected message. I am stuck!!!	
+	
+	git pull origin master
 
+16.	I have created single/multiple commits. When I am trying to push my changes, getting a rejected message. 
+	Can I pull the new changes without merging the commit (Rebase)?
+	
+	Yes. You can pull the changes without a merge. This is called Rebase. I know you have heard it a lot. 
+	It is very simple though.
+	1. Pull with rebase, git pull --rebase
+	2. Push the changes, git push
+	
+17.	I have many commits. How can I transform them into a single commit (squash)?
+	Converting multiple commits into one is known as Squashing. 
+	We will achieve this by rebasing with the help of the interactive feature of the editor (VSCode).
+	
+	1. Run git rebase -i HEAD~<n> (where n refers to the number of commits to squash)
+	2. Mark all the commits as 'Squash' except the oldest one
+	3. Click on 'Start rebase'
+	4. Enter the commit message
+	5. Push the changes
+	
+18. I have made changes and committed to a branch. I want to copy the same changes to another branch.
 
+	To copy the changes of a commit from one branch to another, you can use cherry pick. 
+	First obtain the commit id of the commit, which you want to copy.
+	
+	Checkout the branch, git checkout <destination-branch>
+	Cherry-pick the commit, git cherry-pick <commit-id>
+	
+19. 
 
