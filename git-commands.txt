@@ -12,3 +12,4 @@ git fetch # To bring the branches from remote to local
 git pull # To bring the changes of branches from remote to local
 git log # To get the logs of commit i,e head (latest commit)
 git log --oneline  # To get the commit details of first line
+git pull origin master --rebase  # To pull the latest code and commits from remote to local
